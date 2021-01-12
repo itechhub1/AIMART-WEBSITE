@@ -1,0 +1,6 @@
+.carosel {
+ height: 45%;
+ width: 75%;
+
+  object-fit: cover;
+}
