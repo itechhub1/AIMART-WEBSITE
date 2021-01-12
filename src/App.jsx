@@ -18,6 +18,7 @@ function App() {
           <Route path="/" exact>
             <Navbar />
             <Index />
+            
           </Route>
 
           <Route path="/about-us">
