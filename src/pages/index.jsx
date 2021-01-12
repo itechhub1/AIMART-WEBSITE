@@ -38,7 +38,7 @@ const header = () => {
       <div className=" p-4 my-32 flex flex-col justify-center items-center">
         <div className=" max-w-6xl w-full">
           <h1 className="font-medium text-3xl text-center mb-8">
-            Your trusted real estate company
+            Your trusted real estate company.
           </h1>
           <div className="grid-3">{renderEstate()}</div>
         </div>
