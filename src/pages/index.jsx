@@ -1,7 +1,7 @@
 import React from "react";
 
 import Card from "../components/cards";
-import Propertices from "./propertices";
+import Properties from "./properties";
 import Footer from "./footer";
 import { estatesIndex } from "../constants/mock";
 
@@ -44,13 +44,13 @@ const header = () => {
         </div>
       </div>
 
-      {/* propertices */}
+      {/* properties */}
       <div className="flex flex-col justify-center items-center bg-blue-100 p-16">
         <h1 className="text-blue-900 mb-4 font-bold text-xl sm:text-3xl text-center">
           {" "}
-          Affordable Propertices
+          Affordable Properties
         </h1>
-        <Propertices />
+        <Properties />
       </div>
 
       <div className="">
