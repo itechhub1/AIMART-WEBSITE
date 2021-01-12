@@ -4,6 +4,8 @@ import Navbar from "./pages/navbar/index";
 import history from "./history";
 import Index from "./pages/index";
 import AboutUs from "./pages/aboutUs";
+import Footer from "./pages/footer";
+import Services from "./pages/services";
 
 import "./dist/style.css";
 import "./dist/app.css";
@@ -21,6 +23,13 @@ function App() {
           <Route path="/about-us">
             <Navbar />
             <AboutUs />
+            <Footer />
+          </Route>
+
+          <Route path="/services" exact>
+            <Navbar />
+            <Services />
+           
           </Route>
         </Switch>
       </Router>

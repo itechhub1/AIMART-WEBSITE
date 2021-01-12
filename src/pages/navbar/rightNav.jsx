@@ -67,16 +67,6 @@ const RightNav = ({ open, isAuth, logout }) => {
             ref={(el) => (myRef.current = el)}
             onClick={changeLayout}
           >
-            Home
-          </a>
-        </li>
-        <li>
-          <a
-            href="#!"
-            className="text-blue-800 hover:text-orange-300"
-            ref={(el) => (myRef.current = el)}
-            onClick={changeLayout}
-          >
             Blog
           </a>
         </li>
@@ -101,14 +91,14 @@ const RightNav = ({ open, isAuth, logout }) => {
           </a>
         </li>
         <li>
-          <a
-            href="auth"
+          <Link
+            to="/services"
             className="text-blue-800 hover:text-orange-300"
             ref={(el) => (myRef.current = el)}
             onClick={changeLayout}
           >
             Service
-          </a>
+          </Link>
         </li>
 
         <li>
