@@ -1,61 +1,103 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const SingleServices = ({ services }) => {
-  const { image, name, location, fullPlot, halfPlot } = services;
+  /* _id(pin):"6000721ed0ffb60017593baa"
+type(pin):"house"
+name(pin):"tim"
+purpose(pin):"commercial"
+address(pin):"ijub"
+state(pin):"Adamawa"
+lga(pin):"xyzz"
+featured_photo(pin):"http://aimart-api.herokuapp.com/assets/gallery/56a085bc7a528b26a48f2bf13f6b90baA_Aanonymous-4k-ok-2880x1800.jpg"
+features(pin):
+neighbourhoods(pin):
+benefits(pin):
+description(pin):"lorem"
+faqs(pin):
+payment_status(pin):"for_rent"
+agreement_fee(pin):233444
+survey_fee(pin):55555
+status(pin):"available"
+featured_video(pin):""
+purchase_form(pin):""
+document(pin):
+fake_document(pin): */
+
+  const {
+    featured_photo,
+    name,
+    address,
+    no_of_plots,
+    _id,
+    description,
+  } = services;
   const imageRef = React.createRef();
-
-  const [span, setspan] = useState({ spans: 0 });
-
-  let setSpan = () => {
-    const height = imageRef.current.clientHeight;
-   
-    const spans = Math.ceil(height / 10);
-    return setspan({ spans });
+  let truncate = (str) => {
+    return str.split(" ").splice(0, 20).join(" ") + "...";
   };
 
-  useEffect(() => {
-    imageRef.current.addEventListener("load", setSpan);
-    return () => {};
-  }, []);
-
   return (
-    <div className="shadow-lg text-white rounded-l-lg p-2 " style={{gridRowEnd:`span ${span}`}} >
-      <div >
-        <img src={image.default} ref={imageRef} alt="image" style={{width:"100%", height:400,objectFit:"cover"}} />
+    <div className="shadow-lg text-white m">
+      <div>
+        <img
+          src={featured_photo}
+          ref={imageRef}
+          alt="aimart reactores__image"
+          style={{ width: "100%", height: 400, objectFit: "cover" }}
+        />
       </div>
-      <h1 className="text-black font-bold text-xl mt-4">{name}</h1>
-      <p className="text-bold text-gray-500 mt-4">{location}</p>
-      <div className="grid-2">
+      <h1 className="text-black font-bold text-xl mt-4 p">{name}</h1>
+
+      <div className="flex items-center p">
+        {" "}
+        <img
+          src="https://img.icons8.com/fluent/48/000000/maps.png"
+          className="w-4"
+        />
+        <p className="text-bold text-gray-600 mr-2 p">{address}</p>
+      </div>
+      <p className="text-bold text-gray-600  p  font-normal text-sm">
+        {truncate(description)}
+      </p>
+
+      <div className="flex justify-center items-center p w-full">
         <div className="  text-blue-900 font-bold p-2 ">
           <p>Full-Plot</p>
           <br />
-          <p>{fullPlot}</p>
+          <p>{no_of_plots.full} sqm</p>
         </div>
         <div className="  text-blue-900 font-bold p-2">
-          <p>Full-Plot</p>
+          <p>Half-Plot</p>
           <br />
-          <p>{halfPlot}</p>
+          <p>{no_of_plots.half} sqm</p>
         </div>
       </div>
 
-      <div className="grid-3">
-        <input
-          type="button"
+      <div className="flex flex-wrap w-full p-4">
+        <a
+          href={`https://app.aimartrealtors.com/app/properties/view/${_id}`}
           value="Buy Now"
-          className="bg-blue-100 border border-blue-900 text-blue-900 font-bold rounded-lg p w-auto"
-        />
+          className="bg-blue-800 border border-blue-900  text-white font-bold text-xs rounded-lg p w-auto text-center "
+        >
+          Buy Now
+        </a>
 
-        <input
-          type="button"
+        <a
+          href={`/app/properties/view/${_id}`}
           value="Reserve"
-          className="bg-orange-100 border border-orange-900 text-orange-900 font-bold rounded-lg w-auto p"
-        />
+          className="bg-orange-900 border border-orange-900 text-white font-bold text-xs rounded-lg w-auto text-center p mx-auto"
+        >
+          Reserve
+        </a>
 
-        <input
-          type="button"
+        <Link
+          to={`/details/${_id}`}
           value="Learn More"
-          className="bg-teal-100 border border-teal-900 text-teal-900 font-bold rounded-lg w-auto p"
-        />
+          className="bg-teal-900 border border-teal-900 text-white font-bold text-xs rounded-lg p w-auto text-center "
+        >
+          Learn More
+        </Link>
       </div>
     </div>
   );

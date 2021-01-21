@@ -27,13 +27,8 @@ const Ul = styled.ul`
   }
 `;
 
-const RightNav = ({ open, isAuth, logout }) => {
+const RightNav = ({ open, setOpen }) => {
   const myRef = useRef([]);
-  const changeLayout = () => {
-    myRef.current.focus();
-    myRef.current.style.textDecoration = "underline";
-    console.log(myRef.current);
-  };
 
   const autenticated = () => {
     return (
@@ -47,10 +42,7 @@ const RightNav = ({ open, isAuth, logout }) => {
           </Link>
         </li>
         <li>
-          <a
-            className="text-blue-800 bg-white border-gray-400 hover:text-white hover:bg-red-500 rounded-lg p-4 px-4"
-            onClick={logout}
-          >
+          <a className="text-blue-800 bg-white border-gray-400 hover:text-white hover:bg-red-500 rounded-lg p-4 px-4">
             logout
           </a>
         </li>
@@ -61,11 +53,35 @@ const RightNav = ({ open, isAuth, logout }) => {
     return (
       <Fragment>
         <li>
-          <a
-            href="#!"
+          <Link
+            to="/"
             className="text-blue-800 hover:text-orange-300"
             ref={(el) => (myRef.current = el)}
-            onClick={changeLayout}
+            onClick={() => setOpen()}
+          >
+            Home
+          </Link>
+        </li>
+        <li>
+          <div className="">
+          <Link
+            to="/services"
+            className="text-blue-800 hover:text-orange-300"
+            ref={(el) => (myRef.current = el)}
+            onClick={() => setOpen()}
+          >
+            Service
+          </Link>
+          </div>
+        </li>
+        <li>
+          <a
+            href="https://blog.aimartrealtors.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-800 hover:text-orange-300"
+            ref={(el) => (myRef.current = el)}
+            onClick={setOpen}
           >
             Blog
           </a>
@@ -75,30 +91,10 @@ const RightNav = ({ open, isAuth, logout }) => {
             href="#!"
             className="text-blue-800 hover:text-orange-300"
             ref={(el) => (myRef.current = el)}
-            onClick={changeLayout}
+            onClick={setOpen}
           >
             Faq
           </a>
-        </li>
-        <li>
-          <a
-            href="#!"
-            className="text-blue-800 hover:text-orange-300"
-            ref={(el) => (myRef.current = el)}
-            onClick={changeLayout}
-          >
-            Contact
-          </a>
-        </li>
-        <li>
-          <Link
-            to="/services"
-            className="text-blue-800 hover:text-orange-300"
-            ref={(el) => (myRef.current = el)}
-            onClick={changeLayout}
-          >
-            Service
-          </Link>
         </li>
 
         <li>
@@ -107,19 +103,19 @@ const RightNav = ({ open, isAuth, logout }) => {
             href="auth"
             className="text-blue-800 hover:text-orange-300"
             ref={(el) => (myRef.current = el)}
-            onClick={changeLayout}
+            onClick={setOpen}
           >
             About Us
           </Link>
         </li>
         <li>
-          <Link
-            to="/auth/signin"
+          <a
+            href="https://app.aimartrealtors.com/login"
             className="bg-blue-400 text-white hover:text-orange-800 hover:bg-white bg-white p  border-2 border-green-400 rounded-lg "
           >
             {" "}
             Dashboard login{" "}
-          </Link>
+          </a>
         </li>
       </Fragment>
     );
@@ -127,7 +123,8 @@ const RightNav = ({ open, isAuth, logout }) => {
 
   return (
     <Ul open={open} className="z-30 px-5 text-sm  capitalize text-right">
-      {isAuth ? autenticated() : notAuthenticated()}
+      {/*     {isAuth ? autenticated() : notAuthenticated()} */}
+      {notAuthenticated()}
     </Ul>
   );
 };
