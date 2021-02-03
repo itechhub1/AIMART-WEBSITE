@@ -46,22 +46,18 @@ const aboutUs = () => {
           </span>
           <div className="grid-2 w-full p-10">
             <div className=" text-gray-500 tracking-wider leading-loose font-mono">
-              Aimart Realtors is a real estate management and development firm
-              with years of experience in providing excellent housing/shelter
-              solution to a wide spectrum of clientele or prospective property
-              owners. At Aimart Realtors, we build homes, offices and shopping
-              malls that meet the best standard obtained across the globe for
-              individuals and corporate concerns who have also continued to
-              build greater confidence in our products and services. Since the
-              inception of our company, we have successfully provide end-to-end,
-              client oriented mortgage finance solutions and real estate
-              portfolio that offer optimized shelters for both individuals and
-              businesses. Overtime, our company has remained consistent to it's
-              vision as a " a one stop solution provider in the global real
-              estate business" and thus continues to design, conceptualize,
-              build and manage decent and affordable residental/
-              office/commercial accomdations that are execllent for habitation
-              and investment.
+              Aimart Realtors is an indigenous company
+              established in 2004 with a drive to providing practical solutions
+              towards making home ownership accessible and affordable to
+              Nigerians across social stratas. With first class research &amp;
+              development approach and a team of highly qualified and
+              experienced professionals, Aimart Realtors constantly works
+              towards ensuring that the housing sector is open and works for all
+              not just as a means to obtain shelter but also for security and as
+              an investment tool. We are driven by value addition and filling
+              the massive void in our local housing deficit with quality and
+              affordable housing solutions. We know the problems. We provide the
+              solutions!
             </div>
 
             <div className="">
