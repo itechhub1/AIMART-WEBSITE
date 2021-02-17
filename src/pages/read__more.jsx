@@ -101,22 +101,27 @@ const Read__more = () => {
   let planTitle1;
   let planTitle2;
   let planTitle3;
+  let heading;
   switch (parseInt(id)) {
     case 1:
       planTitle1 = "Not Too Young";
       planTitle2 = "Kolo Quarter";
       planTitle3 = "Legacy";
+      heading = "Installment Plans";
     break;
     case 2:
       planTitle1 = "Cassava";
       planTitle2 = "Maize";
       planTitle3 = "Pumpkin (Ugwu)";
+      heading = "Farming Schemes";
       break;
     default:
-      planTitle1 = "Not Too Young";
-      planTitle2 = "Kolo Quarter";
-      planTitle3 = "Legacy";
+      planTitle1 = "Gold Basic";
+      planTitle2 = "Gold Executive";
+      planTitle3 = "Platinum Executive";
+      heading = "Investment Plans";
   }
+
 
   return (
     <>
@@ -124,7 +129,7 @@ const Read__more = () => {
 
       <div className=" p-8 px-8 my-8">
         <h1 className="text-2xl font-bold text-black text-center">
-         {parseInt(id) === 1 ? "Installment Plans" : "Farming Schemes"}
+         {heading}
         </h1>
         <div className="grid-3 w-full text-gray-700 my-8">
           <Plan

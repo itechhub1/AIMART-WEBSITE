@@ -24,7 +24,7 @@ const Services = ({ properties }) => {
             to="/services"
             className=" hover:bg-blue-800 hover:text-white bg-white  rounded-lg  border   text-blue-900 px-4 sm:mx-4  "
           >
-            All properies
+            All properties
           </Link>
           <Link
             to="/land"
