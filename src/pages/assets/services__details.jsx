@@ -12,7 +12,7 @@ const Propertices__details = ({ getPropertiesDetails, details }) => {
   const imgarr = [];
   useEffect(() => {
     getPropertiesDetails(id);
-  }, []);
+  }, [getPropertiesDetails, id]);
 
   useEffect(() => {
     if (details) {
@@ -21,7 +21,7 @@ const Propertices__details = ({ getPropertiesDetails, details }) => {
       );
       setIMAGES(imgarr);
     }
-  }, [details]);
+  }, [details, imgarr]);
 
   if (!details) {
     return <Loading />;
