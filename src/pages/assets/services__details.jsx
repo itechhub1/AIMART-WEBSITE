@@ -9,19 +9,20 @@ const Propertices__details = ({ getPropertiesDetails, details }) => {
   const { id } = useParams();
 
   const [IMAGES, setIMAGES] = useState([]);
-  const imgarr = [];
+  
   useEffect(() => {
     getPropertiesDetails(id);
   }, [getPropertiesDetails, id]);
 
   useEffect(() => {
+    const imgarr = [];
     if (details) {
       details.more_photos.map((phn) =>
         imgarr.push({ src: phn.path, thumbnail: phn.path })
       );
       setIMAGES(imgarr);
     }
-  }, [details, imgarr]);
+  }, [details]);
 
   if (!details) {
     return <Loading />;
