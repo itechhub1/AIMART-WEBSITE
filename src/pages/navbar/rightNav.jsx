@@ -1,7 +1,6 @@
-import React, { Fragment, useRef } from "react";
+import React, { Fragment, useRef, useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { connect } from "react-redux";
 
 const Ul = styled.ul`
   list-style: none;
@@ -26,29 +25,42 @@ const Ul = styled.ul`
     }
   }
 `;
+// #0c2133
+const DropDownUl = styled.ul`
+text-align: center;
+position: absolute;
+@media (max-width: 768px) {
+  background-color: #0d2538;
+  text-align: right;
+  position: relative;
+  background-color: #0c2235;
+  // box-shadow: inset 0px 0px 5px rgba(255, 255, 255, .1);
+}
+`;
 
 const RightNav = ({ open, setOpen }) => {
   const myRef = useRef([]);
+  const [isDropDownShown, setIsDropDownShown] = useState(false);
 
-  const autenticated = () => {
-    return (
-      <Fragment>
-        <li>
-          <Link
-            to="/dashboard/individual"
-            className="text-green-800 hover:text-orange-300"
-          >
-            My Dashboard
-          </Link>
-        </li>
-        <li>
-          <a className="text-blue-800 bg-white border-gray-400 hover:text-white hover:bg-red-500 rounded-lg p-4 px-4">
-            logout
-          </a>
-        </li>
-      </Fragment>
-    );
-  };
+  // const authenticated = () => {
+  //   return (
+  //     <Fragment>
+  //       <li>
+  //         <Link
+  //           to="/dashboard/individual"
+  //           className="text-green-800 hover:text-orange-300"
+  //         >
+  //           My Dashboard
+  //         </Link>
+  //       </li>
+  //       <li>
+  //         <a className="text-blue-800 bg-white border-gray-400 hover:text-white hover:bg-red-500 rounded-lg p-4 px-4">
+  //           logout
+  //         </a>
+  //       </li>
+  //     </Fragment>
+  //   );
+  // };
   const notAuthenticated = () => {
     return (
       <Fragment>
@@ -63,16 +75,76 @@ const RightNav = ({ open, setOpen }) => {
           </Link>
         </li>
         <li>
-          <div className="">
           <Link
             to="/services"
             className="text-blue-800 hover:text-orange-300"
             ref={(el) => (myRef.current = el)}
             onClick={() => setOpen()}
           >
-            Service
+            Our Properties
           </Link>
-          </div>
+        </li>
+        <li
+          className="relative"
+          onMouseOver={() => setIsDropDownShown(true)}
+          onMouseLeave={() => setIsDropDownShown(false)}
+        >
+          <Link
+            to="#!"
+            className="text-blue-800 hover:text-orange-300 inline-flex items-center"
+            ref={(el) => (myRef.current = el)}
+          >
+            Services{" "}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              className="ml-2 bi bi-chevron-down"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fillRule="evenodd"
+                d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"
+              />
+            </svg>
+          </Link>
+          <DropDownUl
+            className={`shadow bg-white w-full ${
+              isDropDownShown ? "block" : "hidden"
+            }`}
+          >
+            <li>
+              <Link
+                to="/read-more/1"
+                className="text-blue-800 hover:text-orange-300"
+                ref={(el) => (myRef.current = el)}
+                onClick={() => setOpen()}
+              >
+                Real Estate
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/read-more/2"
+                className="text-blue-800 hover:text-orange-300"
+                ref={(el) => (myRef.current = el)}
+                onClick={() => setOpen()}
+              >
+                Farm Estate
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/read-more/3"
+                className="text-blue-800 hover:text-orange-300"
+                ref={(el) => (myRef.current = el)}
+                onClick={() => setOpen()}
+              >
+                A-Vest
+              </Link>
+            </li>
+          </DropDownUl>
         </li>
         <li>
           <a
@@ -123,7 +195,7 @@ const RightNav = ({ open, setOpen }) => {
 
   return (
     <Ul open={open} className="z-30 px-5 text-sm  capitalize text-right">
-      {/*     {isAuth ? autenticated() : notAuthenticated()} */}
+      {/*     {isAuth ? authenticated() : notAuthenticated()} */}
       {notAuthenticated()}
     </Ul>
   );

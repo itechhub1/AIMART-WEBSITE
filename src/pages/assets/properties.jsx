@@ -14,9 +14,10 @@ const Estate = ({ properties }) => {
 
   const renderCarouselItem = () => {
     return properties
-      .map((ppt) => (
+      .map((ppt, idx) => (
         <div
-          className="bg-white shadow-lg mx-2  "
+        key={idx}
+          className="bg-white shadow-lg mx-2"
           onClick={() => history.push(`/details/${ppt._id}`)}
         >
           <div className=" relative">
@@ -36,6 +37,7 @@ const Estate = ({ properties }) => {
               <img
                 src="https://img.icons8.com/fluent/48/000000/maps.png"
                 className="w-6 h-6"
+                alt=""
               />
               <p className="sm:font-bold  text-black ">{ppt.address}</p>
             </div>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Gallary from "react-grid-gallery";
 import { getPropertiesDetails } from "../../action/properties/index";
 import { connect } from "react-redux";
@@ -28,11 +28,11 @@ const Propertices__details = ({ getPropertiesDetails, details }) => {
   }
 
   const {
-    more_photos,
+    // more_photos,
     name,
-    lga,
-    state,
-    purpose,
+    // lga,
+    // state,
+    // purpose,
     type,
     address,
     featured_photo,
@@ -40,7 +40,7 @@ const Propertices__details = ({ getPropertiesDetails, details }) => {
     status,
     price,
     plot_size,
-    features,
+    // features,
     payment_plans,
     _id,
   } = details;
@@ -84,6 +84,7 @@ const Propertices__details = ({ getPropertiesDetails, details }) => {
                 <img
                   src="https://img.icons8.com/fluent/48/000000/maps.png"
                   className="w-6 h-6"
+                  alt=""
                 />
                 <p className="sm:font-bold  text-black ">{address}</p>
               </div>

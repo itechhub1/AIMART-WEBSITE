@@ -4,8 +4,8 @@ import { whatWeDo, ourTeams } from "../constants/mock";
 
 const aboutUs = () => {
   const renderCards = () => {
-    return whatWeDo.map((item) => (
-      <div className="bg-white shadow-lg p-12 shadow-lg">
+    return whatWeDo.map((item, idx) => (
+      <div key={idx} className="bg-white shadow-lg p-12 shadow-lg">
         <div className="bg-blue-100 rounded-full w-32 h-32">
           <img
             src={item.image.default}
@@ -21,8 +21,8 @@ const aboutUs = () => {
   };
 
   const renderOurTeams = () => {
-    return ourTeams.map((team) => (
-      <div className="bg-white shadow-lg p-12 shadow-lg">
+    return ourTeams.map((team, idx) => (
+      <div key={idx} className="bg-white shadow-lg p-12 shadow-lg">
         <img
           src={team.image.default}
           alt="logo"

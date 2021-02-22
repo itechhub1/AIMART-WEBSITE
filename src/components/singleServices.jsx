@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 const SingleServices = ({ services }) => {
@@ -54,6 +54,7 @@ fake_document(pin): */
         <img
           src="https://img.icons8.com/fluent/48/000000/maps.png"
           className="w-4"
+          alt=""
         />
         <p className="text-bold text-gray-600 mr-2 p">{address}</p>
       </div>

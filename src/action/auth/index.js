@@ -1,5 +1,5 @@
 import axios from '../../api/auhothorizedAPI'
-import {CURRENT_USER} from '../types'
+// import {CURRENT_USER} from '../types'
 
 export const GetProfile = ()=> async dispatch =>{
 

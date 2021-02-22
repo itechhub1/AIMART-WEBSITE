@@ -3,39 +3,22 @@ import React from "react";
 import Card from "../components/cards";
 import Properties from "./assets/properties";
 import { estatesIndex } from "../constants/mock";
-import { Link } from "react-router-dom";
 
 const header = () => {
   const renderEstate = () => {
-    return estatesIndex.map((itm) => <Card item={itm} />);
+    return estatesIndex.map((itm, idx) => <Card key={idx} item={itm} />);
   };
 
   const renderSocial = () => {
     return (
       <div
-        className="  bg-white w-12 py-2     h-56 absolute right-0 top-0 bottom-0 mt-20 fixed  rounded-full px-1  mr-2 "
+        className="  bg-white w-12 py-2 h-56 absolute right-0 top-0 bottom-0 mt-20 fixed  rounded-full px-1  mr-2 "
         style={{ top: "25%", position: "fixed" }}
       >
         <div className="flex flex-col justify-evenly items-center m-auto">
-          <div className="bg-blue-200 p rounded-full">
-            <img
-              src="https://img.icons8.com/color/50/000000/facebook.png"
-              style={{ width: "30px" }}
-            />
-          </div>
-          <div className="bg-blue-200 p rounded-full mt-4">
-            <img
-              src="https://img.icons8.com/fluent/48/000000/twitter.png"
-              style={{ width: "30px" }}
-            />
-          </div>
-
-          <div className="bg-blue-200 p rounded-full mt-4">
-            <img
-              src="https://img.icons8.com/color/48/000000/instagram-new.png"
-              style={{ width: "30px" }}
-            />
-          </div>
+          <SocialIcon src="https://img.icons8.com/color/50/000000/facebook.png"/>
+          <SocialIcon src="https://img.icons8.com/fluent/48/000000/twitter.png" className="mt-4" />
+          <SocialIcon src="https://img.icons8.com/color/48/000000/instagram-new.png" className="mt-4" />
         </div>
       </div>
     );
@@ -84,6 +67,18 @@ const header = () => {
         </h1>
         <Properties />
       </div>
+    </div>
+  );
+};
+
+const SocialIcon = ({ src, className="" }) => {
+  return (
+    <div className={`bg-blue-200 p rounded-full ${className}`}>
+      <img
+        src={src}
+        style={{ width: "30px" }}
+        alt=""
+      />
     </div>
   );
 };

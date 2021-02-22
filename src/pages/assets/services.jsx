@@ -10,7 +10,7 @@ const Services = ({ properties }) => {
     if (!properties) {
       return <Loading />;
     }
-    return properties.map((prop) => <SingleServices services={prop} />);
+    return properties.map((prop, idx) => <SingleServices key={idx} services={prop} />);
   };
 
   return (
