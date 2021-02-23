@@ -50,7 +50,7 @@ export const estatesIndex = [
     title: "Real Estate",
     description:
       `<p class="mb-3">Real Estate is a secure path for a guaranteed worry-less and financially stable future. Whether it is land, buildings or agriculture, it has proven to be an investors’ paradise.</p> 
-      <p class="mb-3">Real estate promises and delivers better returns than stock (with less volatility), has a high tangible asset value and will always increase in value over time. "Real Estate investing, even on a very small scale, remains a tried and true means of building an individual\'s cash flow and wealth"- Robert Kiyosaki.</p>
+      <p class="mb-3">Real estate promises and delivers better returns than stock (with less volatility), has a high tangible asset value and will always increase in value over time. "Real Estate investing, even on a very small scale, remains a tried and true means of building an individual's cash flow and wealth"- Robert Kiyosaki.</p>
       <p>Aimart Realtors will not only help in building that dream home; we will walk with you to the end till the entire dream is built. Secure that future! Start building tomorrow, today!</p>`,
     image:
       "https://aimartrealtors.com/wp-content/uploads/2018/04/2-1-300x225.jpg",

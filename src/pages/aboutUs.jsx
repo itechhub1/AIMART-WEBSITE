@@ -35,7 +35,7 @@ const aboutUs = () => {
     <div className="flex flex-col  items-center h-auto">
       <div className=" max-w-6xl w-full">
       <h1 className="font-bold text-xl sm:text-4xl text-black ml-4 my-8">
-            Our Mission Is To Find House
+            About Aimart Realtors
           </h1>
         <div className="bg-white">
           <div className="grid-2 w-full p-10">
