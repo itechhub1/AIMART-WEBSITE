@@ -6,15 +6,10 @@ const aboutUs = () => {
   const renderCards = () => {
     return whatWeDo.map((item, idx) => (
       <div key={idx} className="bg-white shadow-lg p-12 shadow-lg">
-        <div className="bg-blue-100 rounded-full w-32 h-32">
-          <img
-            src={item.image.default}
-            alt="logo"
-            className=" ml-auto mr-auto items-center"
-            style={{ width: 70 }}
-          />
+        <div className="bg-blue-100 rounded-full w-32 h-32 flex items-center justify-center">
+          <img src={item.image.default} alt="logo" style={{ width: 70 }} />
         </div>
-        <h1 className="font-medium text-lg my-8">{item.title}</h1>
+        <h1 className="font-medium text-lg my-6">{item.title}</h1>
         <p className="text-gray-500 font-normal">{item.descriptions}</p>
       </div>
     ));
@@ -26,9 +21,8 @@ const aboutUs = () => {
         <img
           src={team.image.default}
           alt="logo"
-          style={{ width: "100%", height: 350 }}
+          style={{ width: "100%", height: 300, objectFit: "contain" }}
         />
-        <h1 className="font-medium text-lg my-8">Development</h1>
         <p className="text-gray-700 text-black font-bold text-xl">
           {team.name}
         </p>
@@ -40,24 +34,30 @@ const aboutUs = () => {
   return (
     <div className="flex flex-col  items-center h-auto">
       <div className=" max-w-6xl w-full">
-        <div className="bg-white mt-16">
-          <span className="font-bold text-xl sm:text-4xl text-black ml-4">
+      <h1 className="font-bold text-xl sm:text-4xl text-black ml-4 my-8">
             Our Mission Is To Find House
-          </span>
+          </h1>
+        <div className="bg-white">
           <div className="grid-2 w-full p-10">
             <div className=" text-gray-500 tracking-wider leading-loose font-mono">
-              Aimart Realtors is an indigenous company
-              established in 2004 with a drive to providing practical solutions
-              towards making home ownership accessible and affordable to
-              Nigerians across social stratas. With first class research &amp;
-              development approach and a team of highly qualified and
-              experienced professionals, Aimart Realtors constantly works
-              towards ensuring that the housing sector is open and works for all
-              not just as a means to obtain shelter but also for security and as
-              an investment tool. We are driven by value addition and filling
-              the massive void in our local housing deficit with quality and
-              affordable housing solutions. We know the problems. We provide the
-              solutions!
+              <p className="mb-2">
+                Aimart Realtors is an indigenous company established in 2004
+                with a drive to providing practical solutions towards making
+                home ownership accessible and affordable to Nigerians across
+                social stratas.
+              </p>
+              <p className="mb-2">
+                With first class research &amp; development approach and a team
+                of highly qualified and experienced professionals, Aimart
+                Realtors constantly works towards ensuring that the housing
+                sector is open and works for all not just as a means to obtain
+                shelter but also for security and as an investment tool.
+              </p>
+              <p>
+                We are driven by value addition and filling the massive void in
+                our local housing deficit with quality and affordable housing
+                solutions. We know the problems. We provide the solutions!
+              </p>
             </div>
 
             <div className="">

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import parser from 'react-html-parser'
 
 const Cards = ({ item }) => {
   const  truncate = (str) => {
@@ -19,7 +20,7 @@ const Cards = ({ item }) => {
       </div>
       <div className="p-8">
         <h1 className="text-black font-bold text-xl mb-3">{item.title}</h1>
-       <p className="text-gray-500 tracking-wide mb-3">{truncate(item.description)}</p>
+       <p className="text-gray-500 tracking-wide mb-3">{parser(truncate(item.description))}</p>
 
         <Link to={`/read-more/${item.id}`} className="text-blue-800 font-bold">
           Find out more

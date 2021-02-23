@@ -12,10 +12,10 @@ const header = () => {
   const renderSocial = () => {
     return (
       <div
-        className="  bg-white w-12 py-2 h-56 absolute right-0 top-0 bottom-0 mt-20 fixed  rounded-full px-1  mr-2 "
-        style={{ top: "25%", position: "fixed" }}
+        className="hidden sm:block bg-white w-12 py-2 h-56 rounded-full"
+        style={{ top: "25%", position: "sticky" }}
       >
-        <div className="flex flex-col justify-evenly items-center m-auto">
+        <div className="flex flex-col justify-evenly items-center px-1">
           <SocialIcon src="https://img.icons8.com/color/50/000000/facebook.png"/>
           <SocialIcon src="https://img.icons8.com/fluent/48/000000/twitter.png" className="mt-4" />
           <SocialIcon src="https://img.icons8.com/color/48/000000/instagram-new.png" className="mt-4" />
@@ -26,9 +26,8 @@ const header = () => {
 
   return (
     <div className="relative h-auto">
-      {renderSocial()}
-      <header>
-        <div className=" text-white flex flex-col justify-center items-center  h-screen">
+      <header className="flex">
+        <div className=" text-white flex-1 flex flex-col justify-center items-center  h-screen">
           <div className=" mb-64 max-w-6xl w-full ">
             <div className=" ml-4 sm:ml-0 grid-2 ">
               <div className="w-full  ">
@@ -48,6 +47,9 @@ const header = () => {
             </div>
           </div>
         </div>
+          <div className="relative pr-6">
+          {renderSocial()}
+          </div>
       </header>
       {/* find more */}
       <div className=" sm:p-4 my-32 flex flex-col justify-center items-center">

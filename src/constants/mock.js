@@ -1,18 +1,23 @@
 export const ourTeams = [
   {
-    image: require("../assets/pic5.jpg"),
-    name: "Abimbola",
-    role: "Agent",
+    image: require("../assets/Iluyomade Bukola (MD).jpg"),
+    name: "Iluyomade Bukola",
+    role: "Managing Director",
   },
   {
-    image: require("../assets/pic6.jpg"),
-    name: "Timothy",
-    role: "CTO",
+    image: require("../assets/Davies Adeyinka Samuel (Head of Operations).jpg"),
+    name: "Davies Adeyinka Samuel",
+    role: "Head of Operations",
   },
   {
-    image: require("../assets/pic7.jpg"),
-    name: "Eze",
-    role: "Dev",
+    image: require("../assets/Bright Taiwo (Head of Marketing).jpg"),
+    name: "Bright Taiwo",
+    role: "Head of Marketing",
+  },
+  {
+    image: require("../assets/Oluchi Chiyemdu (ADMIN).jpg"),
+    name: "Oluchi Chiyemdu",
+    role: "Admin",
   },
 ];
 
@@ -44,7 +49,9 @@ export const estatesIndex = [
     id: 1,
     title: "Real Estate",
     description:
-      'Real Estate is a secure path for a guaranteed worry-less and financially stable future. Whether it is land, buildings or agriculture, it has proven to be an investors’ paradise.Real estate promises and delivers better returns than stock (with less volatility), has a high tangible asset value and will always increase in value over time. "Real Estate investing, even on a very small scale, remains a tried and true means of building an individual\'s cash flow and wealth"- Robert Kiyosaki. Aimart Realtors will not only help in building that dream home; we will walk with you to the end till the entire dream is built. Secure that future! Start building tomorrow, today!',
+      `<p class="mb-3">Real Estate is a secure path for a guaranteed worry-less and financially stable future. Whether it is land, buildings or agriculture, it has proven to be an investors’ paradise.</p> 
+      <p class="mb-3">Real estate promises and delivers better returns than stock (with less volatility), has a high tangible asset value and will always increase in value over time. "Real Estate investing, even on a very small scale, remains a tried and true means of building an individual\'s cash flow and wealth"- Robert Kiyosaki.</p>
+      <p>Aimart Realtors will not only help in building that dream home; we will walk with you to the end till the entire dream is built. Secure that future! Start building tomorrow, today!</p>`,
     image:
       "https://aimartrealtors.com/wp-content/uploads/2018/04/2-1-300x225.jpg",
     plan: {
@@ -60,7 +67,10 @@ export const estatesIndex = [
     id: 2,
     title: "Farm Estate",
     description:
-      "With the world population growing and demand for food and agriculture increasing exponentially, Aimart Farm Estates offers a great opportunity to our partners to be a part of the agricultural revolution that the world so desperately needs right now.Farming now is beyond just food production for consumption, it is a reliable and sustainable channel for  steady income through local and international trade, food security and also for job creation. Our farm estates are located in areas with high soil fertility and easy access, improving  yield and ease of transportation and transaction (sales of farm yields).The lands in our estates are affordable, fertile and your farming activities and produce are safe and secure. With as low as Two Hundred Thousand Naira (N200,000) Only, you can own a plot and you can also get a massive bonus of as much as an extra plot when you purchase an ACRE or more. “Agriculture is our wisest pursuit, because it will in the end contribute most to real wealth, good morals, and happiness.” — Thomas Jefferson. Whether you are purchasing or partnering, our farm estate packages are flexible and guarantee juicy returns on your investment. Farm with us today to secure your tomorrow.",
+      `<p class="mb-3">With the world population growing and demand for food and agriculture increasing exponentially, Aimart Farm Estates offers a great opportunity to our partners to be a part of the agricultural revolution that the world so desperately needs right now.</p>
+       <p class="mb-3">Farming now is beyond just food production for consumption, it is a reliable and sustainable channel for  steady income through local and international trade, food security and also for job creation. Our farm estates are located in areas with high soil fertility and easy access, improving  yield and ease of transportation and transaction (sales of farm yields).</p>
+       <p class="mb-3">The lands in our estates are affordable, fertile and your farming activities and produce are safe and secure. With as low as Two Hundred Thousand Naira (N200,000) Only, you can own a plot and you can also get a massive bonus of as much as an extra plot when you purchase an ACRE or more.</p> 
+       <p>“Agriculture is our wisest pursuit, because it will in the end contribute most to real wealth, good morals, and happiness.” — Thomas Jefferson. Whether you are purchasing or partnering, our farm estate packages are flexible and guarantee juicy returns on your investment. Farm with us today to secure your tomorrow.</p>`,
     image: "https://aimartrealtors.com/wp-content/uploads/2020/09/1-01.jpg",
     plan: {
       plan_title: "Farming Schemes",

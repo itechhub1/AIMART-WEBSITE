@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { estatesIndex } from "../constants/mock";
+import parser from 'react-html-parser'
 
 const Read__more = () => {
   const { id } = useParams();
@@ -25,17 +26,22 @@ const Read__more = () => {
                         Our Affordable Housing Scheme is a program designed to
                         provide solutions to the increasing housing deficit and
                         the rising cost of development & construction; pricing
-                        housing out of the reach of most.With a people focused
-                        model, we are creating housing schemes in select
-                        locations which are not only affordable but are modelled
-                        to meet current global standards in quality and style in
-                        terms of structures and is highly affordable with proper
-                        mortgage and structured financing to ensure no one is
-                        left out.With varying designs and patterns, we create
-                        not just homes but a community of like-minded people
-                        with a vision towards greater nation building and
-                        improved well-being for all.For more information, please
-                        fill out the form on our website or you can reach us at
+                        housing out of the reach of most.
+                      </p>
+                      <p className="text-gray-100">
+                        With a people focused model, we are creating housing
+                        schemes in select locations which are not only
+                        affordable but are modelled to meet current global
+                        standards in quality and style in terms of structures
+                        and is highly affordable with proper mortgage and
+                        structured financing to ensure no one is left out.
+                      </p>
+                      <p className="text-gray-100">
+                        With varying designs and patterns, we create not just
+                        homes but a community of like-minded people with a
+                        vision towards greater nation building and improved
+                        well-being for all.For more information, please fill out
+                        the form on our website or you can reach us at
                         (phone)/email.
                       </p>
                     </div>
@@ -254,7 +260,7 @@ const ReadMorePage = ({ foundEl, children }) => {
           <div className=" max-w-6xl w-full bg-white p-4 sm:p-16">
             <div className="grid-2 items-center">
               <div className=" text-gray-600 leading-loose font-mono">
-                {foundEl.description}
+                {parser(foundEl.description)}
               </div>
               <img
                 src={foundEl.image}
