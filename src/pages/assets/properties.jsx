@@ -2,6 +2,7 @@ import React from "react";
 
 import "./properties.css";
 import Carousel from "react-elastic-carousel";
+// import Link from 'react-router-dom'
 
 import { connect } from "react-redux";
 import history from "../../history";
@@ -15,6 +16,40 @@ const Estate = ({ properties }) => {
   const renderCarouselItem = () => {
     return properties
       .map((ppt, idx) => (
+          // <div className="card" key={id}>
+          //         <div className="img-card">
+          //           <Link to={`${url}/${name}`} title={name}>
+          //             <img
+          //               src={image}
+          //               alt="luxury real estate property"
+          //               className="img-fluid"
+          //             />
+          //           </Link>
+          //         </div>
+          //         <div className="card-content pl-3 pr-3 pt-4 pb-3">
+          //           <div className="d-flex justify-content-start">
+          //             <Button btn_property="true">{type}</Button>
+          //           </div>
+          //           <div className="text-center pt-2 pb-3">
+          //             <h3>{name}</h3>
+          //             <p>
+          //               <i className="fas fa-map-marker-alt pr-1"></i>
+          //               <span>{location}</span>
+          //             </p>
+          //             <h5>&#8358;{price}</h5>
+          //           </div>
+
+          //           <Link
+          //             to={`${url}/${name}`}
+          //             className="btn btn-outline-primary btn-block pro-link"
+          //           >
+          //             Read More{" "}
+          //           </Link>
+          //         </div>
+          //       </div>
+          //     );
+          //   })}
+
         <div
         key={idx}
           className="bg-white shadow-lg mx-2"
@@ -56,21 +91,22 @@ const Estate = ({ properties }) => {
       ))
       .slice(0, 8);
   };
+  const breakPoints = [ 
+    { width: 1, itemsToShow: 1 },
+    { width: 550, itemsToShow: 2, itemsToScroll: 2 },
+    { width: 768, itemsToShow: 3 },
+    { width: 1200, itemsToShow: 4 }]
 
   return (
     <Carousel
-      itemsToShow={window.innerWidth <= 700 ? 1 : 4}
       enableAutoPlay
       transitionMs={500}
-      autoPlaySpeed={3000}
+      autoPlaySpeed={4000}
+      breakPoints={breakPoints}
     >
       {renderCarouselItem()}
     </Carousel>
   );
-
-  /* return (<Carousel itemsToShow={3} enableAutoPlay transitionMs={500}>
-     {renderCarouselItem()}
-  </Carousel>) */
 };
 
 const mapStateToProps = (state) => {

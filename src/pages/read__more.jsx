@@ -98,7 +98,7 @@ const Read__more = () => {
             </h1>
             <div className="w-full text-gray-700 my-8">
               <div className=" p-4  leading-loose">
-                <div className="flex flex-col md:flex-row justify-center items-center">
+                <div className="flex flex-col md:flex-row justify-center">
                   <div className=" max-w-6xl w-full shadow bg-blue-900">
                     <div className=" leading-loose font-light text-gray-600 p-2">
                       <h1 className="text-xl font-extrabold text-white">
@@ -111,31 +111,36 @@ const Read__more = () => {
                           maximum of 18 months. Returns on Investment (ROI)
                           under the PIS are paid monthly on pro rata basis. The
                           various investment portfolios under this scheme are as
-                          below
+                          below;
                         </p>
-                        <h3 className="font-bold text-gray-100 text-lg mt-2">
+                        <ul className="list-disc ml-5 font-bold">
+                          <li>Gold Basic</li>
+                          <li>Gold Executive</li>
+                          <li>Platinum Executive</li>
+                        </ul>
+                        {/* <h3 className="font-bold text-gray-100 text-lg mt-2">
                           Minimum Investment
                         </h3>
                         At Aimart, the minimum capital investment for Platinum
-                        Executive is{" "}
+                        Executive is 
                         <span className="font-normal text-gray-100">
                           N5,000,000.00
                         </span>{" "}
                         (Five Million Naira only) which can be increased in two
-                        million multiples.For{" "}
+                        million multiples. For
                         <span className="font-bold text-gray-100 text-lg">
                           Gold Executive
                         </span>
-                        , the minimum capital investment is{" "}
+                        , the minimum capital investment is
                         <span className="font-normal text-gray-100">
                           N1,000,000.00
                         </span>{" "}
-                        (One Million Naira only)which can also be increased to a
-                        maximum of{" "}
+                        (One Million Naira only) which can also be increased to a
+                        maximum of
                         <span className="font-normal text-gray-100 ">
-                          N5,000,000.00
+                          N5,000,000.00.
                         </span>
-                        . Investors may equally increase their portfolio in one
+                        Investors may equally increase their portfolio in one
                         million multiples In all of the investment portfolios we
                         have at Aimart, Gold Basic runs ONLY for six (6) with an
                         8 percent Return on Investment – ROI. Both Platinum
@@ -143,54 +148,37 @@ const Read__more = () => {
                         (12) and eighteen (18) months with Returns on Investment
                         – ROI going for 8 percent, 17.5 percent and 35 percent
                         on both.
-                        <p className="mt-4">
-                          <span className="text-gray-100 font-bold text-lg">
-                            Gold Basic
-                          </span>{" "}
-                          has a minimum investment capital of N100,000.00 (One
-                          Hundred Thousand Naira only). Investors are allowed to
-                          increase for up to{" "}
-                          <span className="font-normal text-gray-100">
-                            N500,000.00
-                          </span>{" "}
-                          (Five Hundred Thousand Naira only). Any investor who
-                          intends to increase their already existing investment
-                          is allowed to so do with a minimum of N100,000.00 (One
-                          Hundred Thousand Naira only). However,
-                          clients/investors who already have funds less than
-                          N500,000.00 signed up with Aimart Investment and who
-                          intend to increase such stakes can do so in hundred
-                          thousand multiples.
-                        </p>{" "}
-                        Our Strategic Investment Scheme is a special scheme
+                       
+                        <p>Our Strategic Investment Scheme is a special scheme
                         where prospective investors co-own whatever investment
                         or business such funds are expended on. It is a
                         long-term scheme that guarantees steady returns on
                         investment. The investment here is subject to available
                         project at every point in time and returns are also
-                        negotiable.{" "}
+                        negotiable.</p> */}
                       </div>
                     </div>
                   </div>
 
                   <div className=" max-w-6xl w-full shadow bg-white mt-8 md:mt-0">
                     <div className=" leading-loose font-light text-gray-600 p-2">
-                      <h1 className="text-xl font-extrabold text-black ">
+                      <h1 className="text-xl font-extrabold text-blue-800 ">
                         Strategic Investment Scheme – SIS
                       </h1>
                       <div>
                         <p>
-                          The Portfolio Investment Scheme (PIS) is a pool where
-                          investors put in funds from a minimum of 6 months to
-                          maximum of 18 months. Returns on Investment (ROI)
-                          under the PIS are paid monthly on pro rata basis. The
-                          various investment portfolios under this scheme are as
-                          below
+                        Our Strategic Investment Scheme is a special scheme
+                        where prospective investors co-own whatever investment
+                        or business such funds are expended on. It is a
+                        long-term scheme that guarantees steady returns on
+                        investment. The investment here is subject to available
+                        project at every point in time and returns are also
+                        negotiable.
                         </p>
-                        <h3 className="font-bold text-blue-800 text-lg mt-2">
+                        {/* <h3 className="font-bold text-blue-800 text-lg mt-2">
                           Minimum Investment
                         </h3>
-                        At Aimart, the minimum capital investment for Platinum
+                        <p>At Aimart, the minimum capital investment for Platinum
                         Executive is{" "}
                         <span className="font-normal text-black">
                           N5,000,000.00
@@ -204,37 +192,15 @@ const Read__more = () => {
                         <span className="font-normal text-black">
                           N1,000,000.00
                         </span>{" "}
-                        (One Million Naira only)which can also be increased to a
-                        maximum of N5,000,000.00. Investors may equally increase
-                        their portfolio in one million multiples In all of the
+                        (One Million Naira only) In all of the
                         investment portfolios we have at Aimart, Gold Basic runs
                         ONLY for six (6) with an 8 percent Return on Investment
                         – ROI. Both Platinum Executive and Gold Executive run
                         for six (6), twelve (12) and eighteen (18) months with
                         Returns on Investment – ROI going for 8 percent, 17.5
-                        percent and 35 percent on both.
-                        <p className="mt-4">
-                          <span className="text-blue-800 font-bold text-lg">
-                            Gold Basic
-                          </span>{" "}
-                          has a minimum investment capital of N100,000.00 (One
-                          Hundred Thousand Naira only). Investors are allowed to
-                          increase for up to N500,000.00 (Five Hundred Thousand
-                          Naira only). Any investor who intends to increase
-                          their already existing investment is allowed to so do
-                          with a minimum of N100,000.00 (One Hundred Thousand
-                          Naira only). However, clients/investors who already
-                          have funds less than N500,000.00 signed up with Aimart
-                          Investment and who intend to increase such stakes can
-                          do so in hundred thousand multiples.
-                        </p>{" "}
-                        Our Strategic Investment Scheme is a special scheme
-                        where prospective investors co-own whatever investment
-                        or business such funds are expended on. It is a
-                        long-term scheme that guarantees steady returns on
-                        investment. The investment here is subject to available
-                        project at every point in time and returns are also
-                        negotiable.
+                        percent and 35 percent on both.</p> */}
+                        
+                        
                       </div>
                     </div>
                   </div>
@@ -245,7 +211,8 @@ const Read__more = () => {
         </ReadMorePage>
       );
     default:
-      return <ReadMorePage foundEl={foundEl}></ReadMorePage>;
+      return <ReadMorePage foundEl={foundEl}>
+      </ReadMorePage>;
   }
 };
 
@@ -304,7 +271,7 @@ const Plan = ({ title, details }) => {
     <div className=" flex flex-col justify-center items-center p-4 shadow-lg leading-loose bg-white">
       <h1 className="text-xl font-extrabold text-black ">{title}</h1>
       <p className=" leading-loose font-light text-gray-500 text-sm sm:p-10">
-        {details}
+        {parser(details)}
       </p>
       <button
         type="submit"

@@ -85,14 +85,29 @@ export const estatesIndex = [
     id: 3,
     title: "A-Vest",
     description:
-      "A-VEST is a product of the company set up to offer members of the public returns on their funds placed with the company for an agreeable length of time. This ranges from six (6), nine (9), twelve (12) and eighteen(18) months depending on the choice of our prospective investor.",
+      `<p class="mb-3">A-VEST is the investment arm of Aimart International. It provides opportunities for low to high income earners to invest in real estate and/or logistics with guaranteed returns on investment.</p> <p class="mb-3">It is a product of the company set up to offer members of the public returns on their funds placed with the company for an agreeable length of time. This ranges from six (6), nine (9), twelve (12) and eighteen(18) months depending on the choice of our prospective investor.</p>
+       <p>The aim of A-Vest is to produce financial freedom for our clients through consistent passive income earnings. It comes in two categories:
+       <ul class="list-disc ml-5">
+        <li>Portfolio Investment Scheme (PIS)</li>
+        <li>Strategic Investment Scheme (SIS)</li>
+       </ul>
+       </p>`,
     image: "https://aimartrealtors.com/wp-content/uploads/2020/09/1-01.jpg",
     plan: {
       plan_title: "Investment Plans",
       plan_type: [
-        {title: "Gold Basic", desc: "offers a great opportunity to our partners to be a part of the agricultural revolution that the world so desperately needs right now.Farming now is beyond just food production for consumption, it is a reliable and sustainable channel for  steady"},
-        {title: "Gold Executive", desc: "offers a great opportunity to our partners to be a part of the agricultural revolution that the world so desperately needs right now.Farming now is beyond just food production for consumption, it is a reliable and sustainable channel for  steady"},
-        {title: "Platinum Executive", desc: "offers a great opportunity to our partners to be a part of the agricultural revolution that the world so desperately needs right now.Farming now is beyond just food production for consumption, it is a reliable and sustainable channel for  steady"},
+        {title: "Gold Basic", desc: `<span class="text-blue-800 font-bold text-base">
+        Gold Basic
+      </span>
+      has a minimum investment capital of <span class="font-semibold text-blue-800">N100,000.00</span> (One
+      Hundred Thousand Naira only). Investors are allowed to
+      increase for up to
+      <span class="font-semibold text-blue-800">
+        N500,000.00
+      </span>
+      (Five Hundred Thousand Naira only).`},
+        {title: "Gold Executive", desc: `<span class="text-blue-800 font-bold text-base">Gold Executive</span> has a minimum capital investment of <span class="font-normal text-blue-800 font-semibold">N1,000,000.00</span> (One Million Naira only) which can also be increased to a maximum of <span class="text-blue-800 font-semibold">N5,000,000.00.</span> Investors may equally increase their portfolio in one million multiples`},
+        {title: "Platinum Executive", desc: `The minimum capital investment for <span class="font-bold text-blue-800">Platinum Executive</span> is  <span class="font-semibold text-blue-800">N5,000,000.00</span> (Five Million Naira only) which can be increased in two million multiples.`},
       ]
     }
   },

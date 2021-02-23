@@ -17,16 +17,23 @@ const aboutUs = () => {
 
   const renderOurTeams = () => {
     return ourTeams.map((team, idx) => (
-      <div key={idx} className="bg-white shadow-lg p-12 shadow-lg">
+      <div key={idx} className="bg-white shadow-lg p-6 shadow-lg">
         <img
           src={team.image.default}
           alt="logo"
-          style={{ width: "100%", height: 300, objectFit: "contain" }}
+          style={{
+            width: "100%",
+            height: "auto",
+            maxHeight: 200,
+            objectFit: "contain",
+          }}
         />
-        <p className="text-gray-700 text-black font-bold text-xl">
-          {team.name}
-        </p>
-        <p className=" text-gray-600 font-medium">{team.role}</p>
+        <div className="mt-6">
+          <p className="text-gray-700 text-black font-bold text-xl">
+            {team.name}
+          </p>
+          <p className=" text-gray-600 font-medium">{team.role}</p>
+        </div>
       </div>
     ));
   };
@@ -34,9 +41,9 @@ const aboutUs = () => {
   return (
     <div className="flex flex-col  items-center h-auto">
       <div className=" max-w-6xl w-full">
-      <h1 className="font-bold text-xl sm:text-4xl text-black ml-4 my-8">
-            About Aimart Realtors
-          </h1>
+        <h1 className="font-bold text-xl sm:text-4xl text-black ml-4 my-8">
+          About Aimart Realtors
+        </h1>
         <div className="bg-white">
           <div className="grid-2 w-full p-10">
             <div className=" text-gray-500 tracking-wider leading-loose font-mono">
@@ -71,9 +78,24 @@ const aboutUs = () => {
           <div className="grid-3">{renderCards()}</div>
         </div>
 
+        <div className="grid-2 px-3 lg:px-0">
+          <div className="desc-wrap bg-blue-900 text-white px-5 py-8  rounded-md">
+            <h3 className="text-lg text-left font-bold">Our Mission</h3>
+            <p className="text-gray-100">
+              Our Mission is to provide precise, accurate and affordable real estate services that guarantee on one hand, wealth creation and preservation for our esteemed clients. And a robust Returns On Investments (ROIs) for our teeming clientele on the other hand. 
+            </p>
+          </div>
+          <div className="desc-wrap bg-blue-900 text-white p-5 py-8 rounded-md">
+            <h3 className="text-lg text-left font-bold">Our Vision</h3>
+            <p className="text-gray-100">
+              The Vision of Aimart International is to improve the quality of life of our clients and/or investors.
+            </p>
+          </div>
+        </div>
+
         <div className=" my-20 p">
           <h1 className="text-3xl font-medium mb-6 ">Our Teams</h1>
-          <div className="grid-3">{renderOurTeams()}</div>
+          <div className="grid-4 gap-x-4">{renderOurTeams()}</div>
         </div>
       </div>
     </div>

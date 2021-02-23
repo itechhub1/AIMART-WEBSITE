@@ -9,7 +9,7 @@ const Cards = ({ item }) => {
 
 
   return (
-    <div className="bg-white   shadow-lg">
+    <div className="bg-white shadow-lg">
       <div className="">
         <img
           src={item.image}
@@ -20,7 +20,7 @@ const Cards = ({ item }) => {
       </div>
       <div className="p-8">
         <h1 className="text-black font-bold text-xl mb-3">{item.title}</h1>
-       <p className="text-gray-500 tracking-wide mb-3">{parser(truncate(item.description))}</p>
+       <div className="text-gray-500 tracking-wide mb-3">{parser(truncate(item.description))}</div>
 
         <Link to={`/read-more/${item.id}`} className="text-blue-800 font-bold">
           Find out more
