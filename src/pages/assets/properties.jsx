@@ -16,86 +16,70 @@ const Estate = ({ properties }) => {
   const renderCarouselItem = () => {
     return properties
       .map((ppt, idx) => (
-          // <div className="card" key={id}>
-          //         <div className="img-card">
-          //           <Link to={`${url}/${name}`} title={name}>
-          //             <img
-          //               src={image}
-          //               alt="luxury real estate property"
-          //               className="img-fluid"
-          //             />
-          //           </Link>
-          //         </div>
-          //         <div className="card-content pl-3 pr-3 pt-4 pb-3">
-          //           <div className="d-flex justify-content-start">
-          //             <Button btn_property="true">{type}</Button>
-          //           </div>
-          //           <div className="text-center pt-2 pb-3">
-          //             <h3>{name}</h3>
-          //             <p>
-          //               <i className="fas fa-map-marker-alt pr-1"></i>
-          //               <span>{location}</span>
-          //             </p>
-          //             <h5>&#8358;{price}</h5>
-          //           </div>
-
-          //           <Link
-          //             to={`${url}/${name}`}
-          //             className="btn btn-outline-primary btn-block pro-link"
-          //           >
-          //             Read More{" "}
-          //           </Link>
-          //         </div>
-          //       </div>
-          //     );
-          //   })}
-
         <div
-        key={idx}
-          className="bg-white shadow-lg mx-2"
+          className="cursor-pointer w-full mx-3 rounded-t-lg overflow-hidden shadow hover:shadow-lg transition-transform duration-500 ease-in-out transform hover:-translate-y-1 bg-white relative h-100"
+          key={idx}
           onClick={() => history.push(`/details/${ppt._id}`)}
+          // style={{height: 320}}
         >
-          <div className=" relative">
+          <div className="overflow-hidden" style={{height: 180, objectFit: "cover"}}>
             <img
-            className="transform transition  hover:scale-125 duration-150 "
               src={ppt.featured_photo}
               alt={ppt.description}
-              style={{ width: "100%", height: 400, objectFit: "cover" }}
+              className="transition-transform duration-500 ease-in-out transform hover:scale-110 w-full h-full"
             />
-            <p className=" absolute bg-green-900 text-white p top-0 bottom-0 h-10 font-bold">
-              {ppt.payment_status}
-            </p>
           </div>
-          <div className="p-2">
-            <h1 className="font-bold text-black text-xl pt-2">{ppt.name}</h1>
-            <div className="flex item-center py-4">
-              <img
-                src="https://img.icons8.com/fluent/48/000000/maps.png"
-                className="w-6 h-6"
-                alt=""
-              />
-              <p className="sm:font-bold  text-black ">{ppt.address}</p>
+          <div className="p-6">
+            <div className="">
+              <h3 className="font-bold text-left text-lg text-gray-600">
+                {ppt.name}
+              </h3>
+              <p>
+                <svg
+                  className="w-6 h-6 mr-1 inline-block text-red-600"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  ></path>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                  ></path>
+                </svg>
+                <span>
+                  {ppt.address}, {ppt.state}
+                </span>
+              </p>
+              <h4 className="font-bold text-blue-800 text-lg">
+                ₦{ppt.price.full}
+              </h4>
             </div>
-            <p className="pt-2 font-black">₦{ppt.price.full}</p>
-            <p className="text-lg text-gray-800 pt-2">
-              {ppt.no_of_plots.full}sqm
-            </p>
-            <p
-              className=" bg-orange-100 border border-orange-800 text-orange-800 px-4 font-bold w-auto text-center mt-4"
-              style={{ width: "45%" }}
-            >
-              20 Left
-            </p>
+
+            <span className="text-red-600">20 Left</span>
           </div>
+          <span className="absolute top-0 left-0 bg-blue-900 bg-opacity-30 font-semibold text-white py-2 px-4 rounded-r-full uppercase">
+            {ppt.type}
+          </span>
         </div>
       ))
       .slice(0, 8);
   };
-  const breakPoints = [ 
+
+  const breakPoints = [
     { width: 1, itemsToShow: 1 },
     { width: 550, itemsToShow: 2, itemsToScroll: 2 },
     { width: 768, itemsToShow: 3 },
-    { width: 1200, itemsToShow: 4 }]
+    { width: 1200, itemsToShow: 4 },
+  ];
 
   return (
     <Carousel

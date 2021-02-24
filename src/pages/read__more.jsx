@@ -60,7 +60,7 @@ const Read__more = () => {
                         investments. we have carefully selected and situated our
                         estates in locations with:
                       </p>
-                      <ul className="list-disc">
+                      <ul className="list-disc ml-5">
                         <li>
                           Closeness to key public and private sector
                           developments

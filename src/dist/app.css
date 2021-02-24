@@ -155,7 +155,7 @@ pre {
 .py {
   padding: 0.5rem 0;
 }
-.py-1 {
+/* .py-1 {
   padding: 1rem 0;
 }
 .py-2 {
@@ -163,7 +163,7 @@ pre {
 }
 .py-3 {
   padding: 3rem 0;
-}
+} */
 
 /* Margin */
 .m {
