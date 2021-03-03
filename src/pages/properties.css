@@ -1,0 +1,12 @@
+.carosel {
+  height: 45%;
+  width: 75%;
+  object-fit: cover;
+}
+
+@media (max-width: 700px) {
+  .carosel {
+    width: auto;
+    object-fit: cover;
+  }
+}
