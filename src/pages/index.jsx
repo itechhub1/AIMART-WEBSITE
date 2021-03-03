@@ -4,6 +4,12 @@ import Card from "../components/cards";
 import Properties from "./assets/properties";
 import { estatesIndex } from "../constants/mock";
 
+// Social icons
+import facebook from '../assets/facebook.ico'
+import instagram from '../assets/instagram.ico'
+import twitter from '../assets/twitter.ico'
+import youtube from '../assets/youtube.ico'
+
 const header = () => {
   const renderEstate = () => {
     return estatesIndex.map((itm, idx) => <Card key={idx} item={itm} />);
@@ -15,11 +21,13 @@ const header = () => {
         className="hidden sm:block bg-white w-12 py-2 h-56 rounded-full"
         style={{ top: "25%", position: "sticky" }}
       >
-        <div className="flex flex-col justify-evenly items-center px-1">
-          <SocialIcon src="https://img.icons8.com/color/50/000000/facebook.png"/>
-          <SocialIcon src="https://img.icons8.com/fluent/48/000000/twitter.png" className="mt-4" />
-          <SocialIcon src="https://img.icons8.com/color/48/000000/instagram-new.png" className="mt-4" />
-        </div>
+      
+        <ul className="flex flex-col justify-evenly items-center px-1">
+          <SocialIcon link="https://www.facebook.com" src={facebook}/>
+          <SocialIcon link="https://www.twitter.com" src={twitter} className="mt-4" />
+          <SocialIcon link="https://www.instagram.com" src={instagram} className="mt-4" />
+          <SocialIcon link="https://www.youtube.com" src={youtube} className="mt-4" />
+        </ul>
       </div>
     );
   };
@@ -57,7 +65,7 @@ const header = () => {
           <h1 className="font-medium text-3xl text-center mb-8">
             Your trusted real estate company.
           </h1>
-          <div className="grid-3">{renderEstate()}</div>
+          <div style={{columnGap: "2.3rem"}} className="grid-3">{renderEstate()}</div>
         </div>
       </div>
 
@@ -73,15 +81,17 @@ const header = () => {
   );
 };
 
-const SocialIcon = ({ src, className="" }) => {
+const SocialIcon = ({ link, src, className="" }) => {
   return (
-    <div className={`bg-blue-200 p rounded-full ${className}`}>
-      <img
-        src={src}
-        style={{ width: "30px" }}
-        alt=""
-      />
-    </div>
+    <li style={{backgroundColor: "#010066"}} className={`p rounded-full ${className}`}>
+      <a href={link}>
+        <img
+          src={src}
+          style={{ width: "30px" }}
+          alt=""
+        />
+      </a>
+    </li>
   );
 };
 

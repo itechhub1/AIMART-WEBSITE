@@ -9,16 +9,16 @@ const Cards = ({ item }) => {
 
 
   return (
-    <div className="bg-white shadow-lg">
+    <div className="bg-white shadow hover:shadow-lg">
       <div className="">
         <img
           src={item.image}
           alt="images"
           className="mb-3"
-          style={{ width: "100%", height: 400, objectFit: "cover" }}
+          style={{ width: "100%", height: 250, objectFit: "cover", objectPosition: "50% 0"  }}
         />
       </div>
-      <div className="p-8">
+      <div className="px-8 py-4">
         <h1 className="text-black font-bold text-xl mb-3">{item.title}</h1>
        <div className="text-gray-500 tracking-wide mb-3">{parser(truncate(item.description))}</div>
 

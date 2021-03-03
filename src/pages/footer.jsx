@@ -2,7 +2,7 @@ import React from "react";
 
 const footer = () => {
   return (
-    <div className="bg-blue-900 text-white p-16">
+    <div style={{backgroundColor: "#010066"}} className="text-white p-16">
       <div className="grid-3">
         <div className="">
           <h1 className="font-bold text-lg">Get In Touch!</h1>
