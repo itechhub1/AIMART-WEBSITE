@@ -18,7 +18,7 @@ const header = () => {
   const renderSocial = () => {
     return (
       <div
-        className="hidden sm:block bg-white w-12 py-2 h-56 rounded-full"
+        className="sm:block bg-white w-12 py-2 h-56 rounded-full"
         style={{ top: "25%", position: "sticky" }}
       >
       

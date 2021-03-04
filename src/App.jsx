@@ -26,7 +26,7 @@ function App({ getPropertices,GetProfile }) {
   });
 
   return (
-    <div className=" h-auto bg-gray-100 text-sm font-light bounce">
+    <div style={{paddingTop: 76}} className=" h-auto bg-gray-100 text-sm font-light bounce">
       <Router history={history}>
         <Navbar />
         <Switch>

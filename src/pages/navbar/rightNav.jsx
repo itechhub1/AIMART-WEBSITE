@@ -28,7 +28,7 @@ const Ul = styled.ul`
 // #0c2133
 const DropDownUl = styled.ul`
 text-align: center;
-position: absolute;
+position: absolute; 
 @media (max-width: 768px) {
   text-align: right;
   position: relative;
