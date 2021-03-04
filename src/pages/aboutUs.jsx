@@ -10,7 +10,7 @@ const aboutUs = () => {
           <img src={item.image.default} alt="logo" style={{ width: 70 }} />
         </div>
         <h1 className="font-medium text-lg my-6">{item.title}</h1>
-        <p className="text-gray-500 font-normal">{item.descriptions}</p>
+        <p className="text-gray-900 font-normal">{item.descriptions}</p>
       </div>
     ));
   };
@@ -46,7 +46,7 @@ const aboutUs = () => {
         </h1>
         <div className="bg-white">
           <div className="grid-2 w-full p-10">
-            <div className=" text-gray-500 tracking-wider leading-loose font-mono">
+            <div className=" text-gray-900 tracking-wider leading-loose font-mono">
               <p className="mb-2">
                 Aimart Realtors is an indigenous company established in 2004
                 with a drive to providing practical solutions towards making

@@ -11,7 +11,7 @@ const Ul = styled.ul`
   }
   @media (max-width: 768px) {
     flex-flow: column nowrap;
-    background-color: #0d2538;
+    background-color: #010066;
     position: fixed;
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
     top: 0;
@@ -20,7 +20,7 @@ const Ul = styled.ul`
     width: 300px;
     padding-top: 3.5rem;
     transition: transform 0.3s ease-in-out;
-    li {
+    a {
       color: #fff;
     }
   }
@@ -30,10 +30,9 @@ const DropDownUl = styled.ul`
 text-align: center;
 position: absolute;
 @media (max-width: 768px) {
-  background-color: #0d2538;
   text-align: right;
   position: relative;
-  background-color: #0c2235;
+  background-color: #050458;
   // box-shadow: inset 0px 0px 5px rgba(255, 255, 255, .1);
 }
 `;
@@ -67,7 +66,7 @@ const RightNav = ({ open, setOpen }) => {
         <li>
           <Link
             to="/"
-            className="text-blue-800 hover:text-orange-300"
+            className="text-blue-800 hover:text-gray-500"
             ref={(el) => (myRef.current = el)}
             onClick={() => setOpen()}
           >
@@ -77,7 +76,7 @@ const RightNav = ({ open, setOpen }) => {
         <li>
           <Link
             to="/services"
-            className="text-blue-800 hover:text-orange-300"
+            className="text-blue-800 hover:text-gray-500"
             ref={(el) => (myRef.current = el)}
             onClick={() => setOpen()}
           >
@@ -91,7 +90,7 @@ const RightNav = ({ open, setOpen }) => {
         >
           <Link
             to="#!"
-            className="text-blue-800 hover:text-orange-300 inline-flex items-center"
+            className="text-blue-800 hover:text-gray-500 inline-flex items-center"
             ref={(el) => (myRef.current = el)}
           >
             Services{" "}
@@ -117,7 +116,7 @@ const RightNav = ({ open, setOpen }) => {
             <li>
               <Link
                 to="/read-more/1"
-                className="text-blue-800 hover:text-orange-300"
+                className="text-blue-800 hover:text-gray-500"
                 ref={(el) => (myRef.current = el)}
                 onClick={() => setOpen()}
               >
@@ -127,7 +126,7 @@ const RightNav = ({ open, setOpen }) => {
             <li>
               <Link
                 to="/read-more/2"
-                className="text-blue-800 hover:text-orange-300"
+                className="text-blue-800 hover:text-gray-500"
                 ref={(el) => (myRef.current = el)}
                 onClick={() => setOpen()}
               >
@@ -137,7 +136,7 @@ const RightNav = ({ open, setOpen }) => {
             <li>
               <Link
                 to="/read-more/3"
-                className="text-blue-800 hover:text-orange-300"
+                className="text-blue-800 hover:text-gray-500"
                 ref={(el) => (myRef.current = el)}
                 onClick={() => setOpen()}
               >
@@ -151,7 +150,7 @@ const RightNav = ({ open, setOpen }) => {
             href="https://blog.aimartrealtors.com/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-800 hover:text-orange-300"
+            className="text-blue-800 hover:text-gray-500"
             ref={(el) => (myRef.current = el)}
             onClick={setOpen}
           >
@@ -161,7 +160,7 @@ const RightNav = ({ open, setOpen }) => {
         <li>
           <a
             href="#!"
-            className="text-blue-800 hover:text-orange-300"
+            className="text-blue-800 hover:text-gray-500"
             ref={(el) => (myRef.current = el)}
             onClick={setOpen}
           >
@@ -173,7 +172,7 @@ const RightNav = ({ open, setOpen }) => {
           <Link
             to="/about-us"
             href="auth"
-            className="text-blue-800 hover:text-orange-300"
+            className="text-blue-800 hover:text-gray-500"
             ref={(el) => (myRef.current = el)}
             onClick={setOpen}
           >
@@ -183,7 +182,7 @@ const RightNav = ({ open, setOpen }) => {
         <li>
           <a
             href="https://app.aimartrealtors.com/login"
-            className="bg-blue-400 text-white hover:text-orange-800 hover:bg-white bg-white p  border-2 border-green-400 rounded-lg "
+            className="bg-primary text-white hover:text-blue-800 hover:bg-transparent bg-white p border-2 border-blue-800 rounded-lg "
           >
             {" "}
             Dashboard login{" "}
@@ -194,7 +193,7 @@ const RightNav = ({ open, setOpen }) => {
   };
 
   return (
-    <Ul open={open} className="z-30 px-5 text-sm  capitalize text-right">
+    <Ul open={open} className="z-30 px-5 text-sm capitalize text-right">
       {/*     {isAuth ? authenticated() : notAuthenticated()} */}
       {notAuthenticated()}
     </Ul>

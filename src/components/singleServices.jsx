@@ -58,17 +58,17 @@ fake_document(pin): */
         />
         <p className="text-bold text-gray-600 mr-2 p">{address}</p>
       </div>
-      <p className="text-bold text-gray-600  p  font-normal text-sm">
+      <p className="text-bold text-gray-900  p  font-normal text-sm">
         {truncate(description)}
       </p>
 
       <div className="flex justify-center items-center p w-full">
-        <div className="  text-blue-900 font-bold p-2 ">
+        <div className="  text-primary font-bold p-2 ">
           <p>Full-Plot</p>
           <br />
           <p>{no_of_plots.full} sqm</p>
         </div>
-        <div className="  text-blue-900 font-bold p-2">
+        <div className="  text-primary font-bold p-2">
           <p>Half-Plot</p>
           <br />
           <p>{no_of_plots.half} sqm</p>
@@ -79,7 +79,7 @@ fake_document(pin): */
         <a
           href={`https://app.aimartrealtors.com/app/properties/view/${_id}`}
           value="Buy Now"
-          className="bg-blue-800 border border-blue-900  text-white font-bold text-xs rounded-lg p w-auto text-center "
+          className="bg-primary hover:bg-white hover:text-blue-800 border border-blue-800  text-white font-bold text-xs rounded p w-auto text-center "
         >
           Buy Now
         </a>
@@ -87,7 +87,7 @@ fake_document(pin): */
         <a
           href={`/app/properties/view/${_id}`}
           value="Reserve"
-          className="bg-orange-900 border border-orange-900 text-white font-bold text-xs rounded-lg w-auto text-center p mx-auto"
+          className="bg-grayish border border-gray-500 hover:bg-transparent hover:bg-gray-700 text-white font-bold text-xs rounded w-auto text-center p mx-auto"
         >
           Reserve
         </a>
@@ -95,7 +95,7 @@ fake_document(pin): */
         <Link
           to={`/details/${_id}`}
           value="Learn More"
-          className="bg-teal-900 border border-teal-900 text-white font-bold text-xs rounded-lg p w-auto text-center "
+          className="text-primary bg-transparent hover:bg-blue-800 hover:text-white border border-blue-800 font-bold text-xs rounded p w-auto text-center "
         >
           Learn More
         </Link>

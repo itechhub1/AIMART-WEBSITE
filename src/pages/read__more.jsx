@@ -48,7 +48,7 @@ const Read__more = () => {
                   </div>
 
                   <div className=" max-w-6xl w-full shadow bg-white mt-8 md:mt-0">
-                    <div className=" leading-loose font-light text-gray-600 p-2">
+                    <div className=" leading-loose font-light text-gray-900 p-2">
                       <h1 className="text-xl font-extrabold text-black ">
                         Land
                       </h1>
@@ -100,7 +100,7 @@ const Read__more = () => {
               <div className=" p-4  leading-loose">
                 <div className="flex flex-col md:flex-row justify-center">
                   <div className=" max-w-6xl w-full shadow bg-blue-900">
-                    <div className=" leading-loose font-light text-gray-600 p-2">
+                    <div className=" leading-loose font-light p-2">
                       <h1 className="text-xl font-extrabold text-white">
                         Portfolio Investment Scheme – PIS
                       </h1>
@@ -118,50 +118,12 @@ const Read__more = () => {
                           <li>Gold Executive</li>
                           <li>Platinum Executive</li>
                         </ul>
-                        {/* <h3 className="font-bold text-gray-100 text-lg mt-2">
-                          Minimum Investment
-                        </h3>
-                        At Aimart, the minimum capital investment for Platinum
-                        Executive is 
-                        <span className="font-normal text-gray-100">
-                          N5,000,000.00
-                        </span>{" "}
-                        (Five Million Naira only) which can be increased in two
-                        million multiples. For
-                        <span className="font-bold text-gray-100 text-lg">
-                          Gold Executive
-                        </span>
-                        , the minimum capital investment is
-                        <span className="font-normal text-gray-100">
-                          N1,000,000.00
-                        </span>{" "}
-                        (One Million Naira only) which can also be increased to a
-                        maximum of
-                        <span className="font-normal text-gray-100 ">
-                          N5,000,000.00.
-                        </span>
-                        Investors may equally increase their portfolio in one
-                        million multiples In all of the investment portfolios we
-                        have at Aimart, Gold Basic runs ONLY for six (6) with an
-                        8 percent Return on Investment – ROI. Both Platinum
-                        Executive and Gold Executive run for six (6), twelve
-                        (12) and eighteen (18) months with Returns on Investment
-                        – ROI going for 8 percent, 17.5 percent and 35 percent
-                        on both.
-                       
-                        <p>Our Strategic Investment Scheme is a special scheme
-                        where prospective investors co-own whatever investment
-                        or business such funds are expended on. It is a
-                        long-term scheme that guarantees steady returns on
-                        investment. The investment here is subject to available
-                        project at every point in time and returns are also
-                        negotiable.</p> */}
                       </div>
                     </div>
                   </div>
 
                   <div className=" max-w-6xl w-full shadow bg-white mt-8 md:mt-0">
-                    <div className=" leading-loose font-light text-gray-600 p-2">
+                    <div className=" leading-loose font-light text-gray-900 p-2">
                       <h1 className="text-xl font-extrabold text-blue-800 ">
                         Strategic Investment Scheme – SIS
                       </h1>
@@ -175,31 +137,6 @@ const Read__more = () => {
                         project at every point in time and returns are also
                         negotiable.
                         </p>
-                        {/* <h3 className="font-bold text-blue-800 text-lg mt-2">
-                          Minimum Investment
-                        </h3>
-                        <p>At Aimart, the minimum capital investment for Platinum
-                        Executive is{" "}
-                        <span className="font-normal text-black">
-                          N5,000,000.00
-                        </span>{" "}
-                        (Five Million Naira only) which can be increased in two
-                        million multiples.For{" "}
-                        <span className="font-bold text-blue-800 text-lg">
-                          Gold Executive
-                        </span>
-                        , the minimum capital investment is{" "}
-                        <span className="font-normal text-black">
-                          N1,000,000.00
-                        </span>{" "}
-                        (One Million Naira only) In all of the
-                        investment portfolios we have at Aimart, Gold Basic runs
-                        ONLY for six (6) with an 8 percent Return on Investment
-                        – ROI. Both Platinum Executive and Gold Executive run
-                        for six (6), twelve (12) and eighteen (18) months with
-                        Returns on Investment – ROI going for 8 percent, 17.5
-                        percent and 35 percent on both.</p> */}
-                        
                         
                       </div>
                     </div>
@@ -226,7 +163,7 @@ const ReadMorePage = ({ foundEl, children }) => {
         <div className=" flex justify-center h-auto">
           <div className=" max-w-6xl w-full bg-white p-4 sm:p-16">
             <div className="grid-2 items-center">
-              <div className=" text-gray-600 leading-loose font-mono">
+              <div className=" text-gray-900 leading-loose font-mono">
                 {parser(foundEl.description)}
               </div>
               <img
@@ -270,12 +207,12 @@ const Plan = ({ title, details }) => {
   return (
     <div className=" flex flex-col justify-center items-center p-4 shadow-lg leading-loose bg-white">
       <h1 className="text-xl font-extrabold text-black ">{title}</h1>
-      <p className=" leading-loose font-light text-gray-500 text-sm sm:p-10">
+      <p className=" leading-loose font-light text-gray-900 text-sm sm:p-10">
         {parser(details)}
       </p>
       <button
         type="submit"
-        className="bg-blue-100 border border-blue-900 text-blue-900 p   hover:bg-orange-500 hover:text-white font-bold my-4 rounded-lg"
+        className="bg-primary border border-blue-900 p text-white hover:bg-white hover:text-blue-800 font-bold my-4 rounded-lg"
         onClick={() => console.log()}
       >
         Subscribe Now

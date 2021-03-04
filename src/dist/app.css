@@ -1,6 +1,6 @@
 /* Global Styles */
 :root {
-  --primary-color: #003699;
+  --primary-color: #010066;
   --dark-color: #333333;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
@@ -314,7 +314,7 @@ pre {
 .badge-white,
 .alert-white {
   background: #fff;
-  color: #333;
+  /* color: #333; */
 }
 
 .btn:hover {
@@ -511,4 +511,12 @@ image {
 ::-webkit-scrollbar {
   width: 0px;
   background: transparent; /* make scrollbar transparent */
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+}
+
+.bg-grayish {
+  background-color: #868686;
 }

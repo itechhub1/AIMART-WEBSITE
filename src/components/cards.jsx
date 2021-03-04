@@ -20,7 +20,7 @@ const Cards = ({ item }) => {
       </div>
       <div className="px-8 py-4">
         <h1 className="text-black font-bold text-xl mb-3">{item.title}</h1>
-       <div className="text-gray-500 tracking-wide mb-3">{parser(truncate(item.description))}</div>
+       <div className="text-gray-900 tracking-wide mb-3">{parser(truncate(item.description))}</div>
 
         <Link to={`/read-more/${item.id}`} className="text-blue-800 font-bold">
           Find out more

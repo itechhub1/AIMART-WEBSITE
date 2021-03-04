@@ -22,19 +22,19 @@ const Services = ({ properties }) => {
         <div className=" flex justify-evenly items-center  text-xs sm:text-lg ">
           <Link
             to="/services"
-            className=" hover:bg-blue-800 hover:text-white bg-white  rounded-lg  border   text-blue-900 px-4 sm:mx-4  "
+            className=" bg-primary hover:bg-white hover:text-blue-800 rounded-md border border-blue-800 px-4 py-1 sm:mx-4  "
           >
             All properties
           </Link>
           <Link
             to="/land"
-            className=" hover:bg-blue-800 hover:text-white bg-white  rounded-lg  border  mx-4 text-blue-900 px-4 sm:mx-4  "
+            className="bg-primary hover:bg-white hover:text-blue-800 rounded-md border border-blue-800 mx-4 text-blue-900 px-4 sm:mx-4  "
           >
             Land
           </Link>
           <Link
             to="/houses"
-            className=" hover:bg-blue-800 hover:text-white bg-white   border   rounded-lg text-blue-900 px-4 "
+            className="bg-primary hover:bg-white hover:text-blue-800 border border-blue-800 rounded-md text-blue-900 px-4 "
           >
             Houses
           </Link>
